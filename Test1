@@ -24,8 +24,6 @@
     <div class="form-input">
         <select id="approvalLevel1">
             <option value="Select">Select</option>
-            <option value="line_manager">Line Manager / Reporting Manager</option>
-            <option value="branch_manager">Branch Manager / Cluster Head</option>
         </select>
     </div>
 </div>
@@ -37,9 +35,6 @@
     <div class="form-input">
         <select id="approvalLevel2">
             <option value="Select">Select</option>
-            <option value="sachin_jagannath">Sachin Chavan / Jagannath Prasad</option>
-            <option value="uam_head">UAM HEAD</option>
-            <option value="allwyn_mithun_tushar">Allwyn Dsouza / Mithun Menon / Tushar Kulkarni</option>
         </select>
     </div>
 </div>
