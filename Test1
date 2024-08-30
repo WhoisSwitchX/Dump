@@ -1,0 +1,52 @@
+<div class="form-field">
+            <div class="form-head">
+              <p>Role: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="complianceUser">REPORT_VIEW</option>
+                <option value="audit">CEN_SUP</option>
+                <option value="userL2">ITAM_CHECKER</option>
+                <option value="audit">ITAM_MAKER</option>
+                <option value="audit">PROD_BRANCH_CHECKER</option>
+                <option value="audit">PROD_BRANCH_MAKER</option>
+                <option value="audit">PROD_EFPB_CHECKER</option>
+                <option value="audit">PROD_EFPB_MAKER</option>
+              </select>
+            </div>
+          </div>
+
+
+
+
+
+ <div class="field">
+            <div class="form-head">
+              <p>Approval Level 1: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="aspect">Line Manager / Reporting Manager</option>
+                <option value="aspect">Branch Manager / Cluster Head</option>
+              </select>
+            </div>
+          </div>
+
+
+
+
+<div class="field">
+            <div class="form-head">
+              <p>Approval Level 2: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="aspect">Sachin Chavan / Jagannath Prasad</option>
+                <option value="aspect">UAM HEAD</option>
+                <option value="aspect">Allwyn Dsouza / Mithun Menon / Tushar Kulkarni</option>
+              </select>
+            </div>
+          </div>
