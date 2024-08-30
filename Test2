@@ -1,40 +1,21 @@
-<div class="form-field">
-  <div class="form-head">
-    <p>Role: <span>*</span></p>
-  </div>
-  <div class="form-input">
-    <select id="role-select">
-      <option value="Select">Select</option>
-      <option value="report_view">REPORT_VIEW</option>
-      <option value="cen_sup">CEN_SUP</option>
-      <option value="itam_checker">ITAM_CHECKER</option>
-      <option value="itam_maker">ITAM_MAKER</option>
-      <option value="prod_branch_checker">PROD_BRANCH_CHECKER</option>
-      <option value="prod_branch_maker">PROD_BRANCH_MAKER</option>
-      <option value="prod_efpb_checker">PROD_EFPB_CHECKER</option>
-      <option value="prod_efpb_maker">PROD_EFPB_MAKER</option>
-    </select>
-  </div>
-</div>
+document.getElementById('role').addEventListener('change', function () {
+    const role = this.value;
+    const approvalLevel1 = document.getElementById('approvalLevel1');
+    const approvalLevel2 = document.getElementById('approvalLevel2');
 
-<div class="field">
-  <div class="form-head">
-    <p>Approval Level 1: <span>*</span></p>
-  </div>
-  <div class="form-input">
-    <select name="approvalLevel1">
-      <option value="Select">Select</option>
-    </select>
-  </div>
-</div>
+    // Reset approval levels
+    approvalLevel1.value = 'Select';
+    approvalLevel2.value = 'Select';
 
-<div class="field">
-  <div class="form-head">
-    <p>Approval Level 2: <span>*</span></p>
-  </div>
-  <div class="form-input">
-    <select name="approvalLevel2">
-      <option value="Select">Select</option>
-    </select>
-  </div>
-</div>
+    // Logic to set approval levels based on role
+    if (['prod_branch_checker', 'prod_branch_maker', 'prod_efpb_checker', 'prod_efpb_maker'].includes(role)) {
+        approvalLevel1.value = 'branch_manager'; // Branch Manager / Cluster Head
+        approvalLevel2.value = 'allwyn_mithun_tushar'; // Allwyn Dsouza / Mithun Menon / Tushar Kulkarni
+    } else if (['itam_checker', 'itam_maker'].includes(role)) {
+        approvalLevel1.value = 'line_manager'; // Line Manager / Reporting Manager
+        approvalLevel2.value = 'uam_head'; // UAM HEAD
+    } else if (['report_view', 'cen_sup'].includes(role)) {
+        approvalLevel1.value = 'line_manager'; // Line Manager / Reporting Manager
+        approvalLevel2.value = 'sachin_jagannath'; // Sachin Chavan / Jagannath Prasad
+    }
+});
