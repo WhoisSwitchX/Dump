@@ -3,19 +3,19 @@ document.getElementById('role').addEventListener('change', function () {
     const approvalLevel1 = document.getElementById('approvalLevel1');
     const approvalLevel2 = document.getElementById('approvalLevel2');
 
-    // Reset approval levels
-    approvalLevel1.value = 'Select';
-    approvalLevel2.value = 'Select';
+    // Clear previous options
+    approvalLevel1.innerHTML = '<option value="Select">Select</option>';
+    approvalLevel2.innerHTML = '<option value="Select">Select</option>';
 
     // Logic to set approval levels based on role
     if (['prod_branch_checker', 'prod_branch_maker', 'prod_efpb_checker', 'prod_efpb_maker'].includes(role)) {
-        approvalLevel1.value = 'branch_manager'; // Branch Manager / Cluster Head
-        approvalLevel2.value = 'allwyn_mithun_tushar'; // Allwyn Dsouza / Mithun Menon / Tushar Kulkarni
+        approvalLevel1.innerHTML += '<option value="branch_manager">Branch Manager / Cluster Head</option>';
+        approvalLevel2.innerHTML += '<option value="allwyn_mithun_tushar">Allwyn Dsouza / Mithun Menon / Tushar Kulkarni</option>';
     } else if (['itam_checker', 'itam_maker'].includes(role)) {
-        approvalLevel1.value = 'line_manager'; // Line Manager / Reporting Manager
-        approvalLevel2.value = 'uam_head'; // UAM HEAD
+        approvalLevel1.innerHTML += '<option value="line_manager">Line Manager / Reporting Manager</option>';
+        approvalLevel2.innerHTML += '<option value="uam_head">UAM HEAD</option>';
     } else if (['report_view', 'cen_sup'].includes(role)) {
-        approvalLevel1.value = 'line_manager'; // Line Manager / Reporting Manager
-        approvalLevel2.value = 'sachin_jagannath'; // Sachin Chavan / Jagannath Prasad
+        approvalLevel1.innerHTML += '<option value="line_manager">Line Manager / Reporting Manager</option>';
+        approvalLevel2.innerHTML += '<option value="sachin_jagannath">Sachin Chavan / Jagannath Prasad</option>';
     }
 });
